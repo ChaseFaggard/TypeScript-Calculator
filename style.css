@@ -1,16 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600');
+
+:root {
+    --super-light: #F4F6F7;
+    --orange: #ff7d59;
+    --green-dark: #218c74;
+    --grey-dark: #404040;
+    --poppins: 'Poppins', sans-serif;
+    --background-img: url(https://wallpaperaccess.com/full/5011513.png)
+}
+
 *{
     box-sizing: border-box;
+    font-family: var(--poppins);
 }
 
-.container{
-    margin:20px auto;
-    max-width: 500px;
+body {
+    background: var(--background-img) center center fixed;
 }
 
-.row{
+.container {
+    margin: 20px auto;
+    background: var(--grey-dark);
+    width: 320px;
+    padding: 50px 20px;
+    border-radius: 15px;
+    border: 7px solid var(--super-light);
+}
+
+.container input[type='text'] {
+    margin: 0px 10px 35px 10px;
+    padding: 10px 10px 10px 20px;
+    width: 250px;
+    font-size: 20px;
+    background: var(--green-dark);
+    color: white;
+    cursor: auto;
+    border: 3px solid var(--super-light);
+    border-radius: 4px;
+}
+
+.container input[type='text']:focus {
+    outline: none;
+}
+
+.container input[type='text']::placeholder {
+    color: white;
+}
+
+.row {
     display:flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Make this prettier! */
+button {
+    border: 2px solid var(--grey-dark);
+    color: var(--grey-dark);
+    background: var(--super-light);
+    padding: 5px 10px;
+    margin: 2px;
+    font-size: 20px;
+    text-align: center;
+    width: 60px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .15s;
+}
+
+button:hover {
+    border: 2px solid var(--orange);
+}
+
+button.equal {
+    background: var(--orange);
+    color: white;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
